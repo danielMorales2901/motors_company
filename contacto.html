@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Motors Company | Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 12px 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #f0a500;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    p.sub {
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95em;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: #f0a500;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #d4920a;
+    }
+
+    .info {
+      margin-top: 30px;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      color: #555;
+      font-size: 0.9em;
+    }
+
+    .info p {
+      margin: 4px 0;
+    }
+
+    .aviso {
+      display: none;
+      background: #e6f4ea;
+      border: 1px solid #81c995;
+      color: #2d6a4f;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="acerca.html">Acerca de</a>
+    <a href="galeria.html">Galería</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+
+  <div class="content">
+    <h1>Contacto</h1>
+    <p class="sub">¿Tienes preguntas o sugerencias? Escríbenos.</p>
+
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" placeholder="Tu nombre completo">
+
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" placeholder="correo@ejemplo.com">
+
+
+    <label for="asunto">Asunto</label>
+    <select id="asunto">
+      <option value="">Selecciona un tema</option>
+      <option>Información sobre una moto</option>
+      <option>Sugerencia de contenido</option>
+      <option>Pregunta general</option>
+      <option>Otro</option>
+    </select>
+
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+
+    <button onclick="enviar()">Enviar mensaje</button>
+    <div class="aviso" id="aviso">✅ ¡Mensaje enviado! Gracias por contactarnos.</div>
+
+
+    <div class="info">
+      <p><strong>Universidad:</strong> UTIM — Izúcar de Matamoros, Puebla</p>
+      <p><strong>Asignatura:</strong> Desarrollo Web Integral</p>
+      <p><strong>Carrera:</strong> Ingeniería en TI — DGS</p>
+      <p><strong>Repositorio:</strong> github.com/danielMorales2901/motors_company.git</p>
+    </div>
+  </div>
+
+
+  <footer>© 2025 Motors Company — Todos los derechos reservados</footer>
+
+
+  <script>
+    function enviar() {
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      if (!nombre || !email || !mensaje) {
+        alert('Por favor completa los campos requeridos.');
+        return;
+      }
+      document.getElementById('aviso').style.display = 'block';
+      document.getElementById('nombre').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('mensaje').value = '';
+    }
+  </script>
+
+
+</body>
+
+</html>
